@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>DP RESTARURANT</h1>
+        <div class="cart-container">
+            <button class="cart-button" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <div class="menu">
+        <!-- Pizza Section -->
+        <div class="food-item">
+            <img src="https://via.placeholder.com/150" alt="Food 1">
+            <h3>Pizza</h3>
+            <p>$10.99</p>
+            <button onclick="addToCart('Pizza', 10.99)">Add to Cart</button>
+        </div>
+
+        <!-- Burger Section -->
+        <div class="food-item">
+            <img src="https://via.placeholder.com/150" alt="Food 2">
+            <h3>Burger</h3>
+            <p>$5.99</p>
+            <button onclick="addToCart('Burger', 5.99)">Add to Cart</button>
+        </div>
+
+        <!-- Pasta Section -->
+        <div class="food-item">
+            <img src="https://via.placeholder.com/150" alt="Food 3">
+            <h3>Pasta</h3>
+            <p>$8.49</p>
+            <button onclick="addToCart('Pasta', 8.49)">Add to Cart</button>
+        </div>
+
+        <!-- Salad Section -->
+        <div class="food-item">
+            <img src="https://via.placeholder.com/150" alt="Food 4">
+            <h3>Caesar Salad</h3>
+            <p>$7.49</p>
+            <button onclick="addToCart('Caesar Salad', 7.49)">Add to Cart</button>
+        </div>
+
+        <!-- Fries Section -->
+        <div class="food-item">
+            <img src="https://via.placeholder.com/150" alt="Food 5">
+            <h3>French Fries</h3>
+            <p>$2.99</p>
+            <button onclick="addToCart('French Fries', 2.99)">Add to Cart</button>
+        </div>
+
+        <!-- Sushi Section -->
+        <div class="food-item">
+            <img src="https://via.placeholder.com/150" alt="Food 6">
+            <h3>Sushi Rolls</h3>
+            <p>$12.99</p>
+            <button onclick="addToCart('Sushi Rolls', 12.99)">Add to Cart</button>
+        </div>
+
+        <!-- Ice Cream Section -->
+        <div class="food-item">
+            <img src="https://via.placeholder.com/150" alt="Food 7">
+            <h3>Ice Cream</h3>
+            <p>$3.49</p>
+            <button onclick="addToCart('Ice Cream', 3.49)">Add to Cart</button>
+        </div>
+
+        <!-- Soft Drink Section -->
+        <div class="food-item">
+            <img src="https://via.placeholder.com/150" alt="Food 8">
+            <h3>Soft Drink</h3>
+            <p>$1.99</p>
+            <button onclick="addToCart('Soft Drink', 1.99)">Add to Cart</button>
+        </div>
+
+        <!-- Donuts Section -->
+        <div class="food-item">
+            <img src="https://via.placeholder.com/150" alt="Food 9">
+            <h3>Donuts</h3>
+            <p>$4.99</p>
+            <button onclick="addToCart('Donuts', 4.99)">Add to Cart</button>
+        </div>
+
+        <!-- Coffee Section -->
+        <div class="food-item">
+            <img src="https://via.placeholder.com/150" alt="Food 10">
+            <h3>Coffee</h3>
+            <p>$2.49</p>
+            <button onclick="addToCart('Coffee', 2.49)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart" class="cart-modal">
+        <div class="cart-modal-content">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0.00</span></p>
+
+            <!-- Address Form -->
+            <h3>Delivery Address</h3>
+            <input type="text" id="address" placeholder="Enter your delivery address" />
+
+            <button onclick="checkout()">Checkout</button>
+            <button onclick="toggleCart()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
